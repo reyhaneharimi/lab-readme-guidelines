@@ -14,6 +14,7 @@ Lab Readme Guidelines (مستندات راهنما)
    introduction
    lab-structure
    mentoring-process
+   platform-features
 
 .. toctree::
    :maxdepth: 1
