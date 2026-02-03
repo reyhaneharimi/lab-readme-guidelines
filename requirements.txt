@@ -1,8 +1,2 @@
-
----
-
-## 2. requirements.txt
-
-```plaintext
 sphinx
 myst-parser
