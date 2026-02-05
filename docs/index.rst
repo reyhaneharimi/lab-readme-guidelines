@@ -1,12 +1,17 @@
 .. toctree::
-   :maxdepth: 2
-   :caption: مروری بر پروژه
+   :maxdepth: 1
+   :caption: Project Overview
 
    overview/index
 
 .. toctree::
-   :maxdepth: 2
-   :caption: شروع سریع
+   :maxdepth: 1
+   :caption: Project Roadmap
 
-   getting-started/index
+   roadmap/index
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Sample Screenshots
+
+   sample-screenshots
