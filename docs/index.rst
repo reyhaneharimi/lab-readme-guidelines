@@ -19,16 +19,15 @@
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: راهنمای نصب
 
-   installation-guides/cluster-reqs
-   installation-guides/installation-instructions
-   installation-guides/cli-install
-   installation-guides/carvel-install
-   installation-guides/infra-providers
-   installation-guides/config-settings
-
+   installation-guides/cluster-reqs/index
+   installation-guides/installation-instructions/index
+   installation-guides/cli-install/index
+   installation-guides/carvel-install/index
+   installation-guides/infra-providers/index
+   installation-guides/config-settings/index
 
 .. toctree::
    :maxdepth: 1
