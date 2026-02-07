@@ -8,13 +8,13 @@
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: شروع سریع
 
-   getting-started/quick-start
-   getting-started/create-workshop
-   getting-started/templates
-   getting-started/local-env
+   getting-started/quick-start-guide/index
+   getting-started/creating-workshop/index
+   getting-started/workshop-templates/index
+   getting-started/local-env/index
    getting-started/sample-workshops
 
 
