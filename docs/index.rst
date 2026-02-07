@@ -46,3 +46,10 @@
    :caption: راهنمای پروداکشن
 
    production-guides/review-guidelines/index   
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: منابع سفارشی
+
+   custom-resources/index   
