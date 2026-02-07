@@ -2,8 +2,8 @@
    :maxdepth: 1
    :caption: جزئیات پروژه
 
-   project-details/overview
-   project-details/roadmap
+   project-details/overview/index
+   project-details/roadmap/index
    project-details/sample-screenshots
 
 
