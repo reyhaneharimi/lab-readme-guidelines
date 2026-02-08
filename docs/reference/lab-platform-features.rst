@@ -14,21 +14,6 @@
 * **قابلیت registered:** محدودیت تعداد سشن همزمان برای کاربران ثبت‌نام شده را کنترل می‌کند.
 * **قابلیت anonymous:** محدودیت سشن برای کاربران مهمان. کاربران ناشناس هم می‌توانند چند سناریو را بطور همزمان اجرا کنند اگر این عدد تعیین شده باشد.
 
-.. code-block:: yaml
-
-   spec:
-     portal:
-       sessions:
-         maximum: 8
-         registered: 1
-         anonymous: 1
-     workshops:
-       - name: lab-asciidoc-sample
-         capacity: 4
-         reserved: 2
-       - name: lab-markdown-sample
-         capacity: 6
-         reserved: 4
 
 .. image:: /_static/config-registered-anonymous.png
    :alt: registered anonymous
@@ -53,22 +38,16 @@
   اگر اجرا یا بارگذاری یک سناریو بیش از مقدار مشخصی طول بکشد و کاربر مدت زیادی معطل بماند (مثلاً زیرساخت جواب ندهد)، این قابلیت session را پاک کرده و مجدداً راه‌اندازی می‌کند.
   این موضوع برای رعایت SLO (Service Level Objective) بسیار اهمیت دارد و باعث تجربه کاربری بهتر می‌شود.
 
-نمونه yaml:
-.. code-block:: yaml
-
-   workshops:
-     - name: lab-markdown-sample
-       capacity: 8
-       reserved: 1
-       expires: 60m
-       overtime: 30m
-       deadline: 120m
-       orphaned: 5m
-       overdue: 2m
 
 .. image:: /_static/config-orphaned-overdue.png
    :alt: پارامترهای orphaned, overdue, deadline, overtime
-   :align: center
+   :align: write
+
+
+.. image:: /_static/dockerme5.PNG
+   :alt: ﭖﺍﺭﺎﻤﺗﺮﻫﺎﯾ orphaned, overdue, deadline, overtime
+   :align: left
+
 
 ---
 
