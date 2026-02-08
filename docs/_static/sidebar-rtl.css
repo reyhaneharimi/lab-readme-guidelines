@@ -1,0 +1,25 @@
+/* راست‌چین کردن و بردن سایدبار به راست */
+.wy-nav-side {
+  left: unset !important;
+  right: 0 !important;
+  border-right: 1px solid #eaeaea;
+  border-left: none !important;
+  direction: rtl !important;
+}
+.wy-nav-content-wrap {
+  margin-left: 0 !important;
+  margin-right: 300px !important; /* width سایدبار */
+}
+.wy-side-scroll, .wy-menu, .wy-menu-vertical {
+  direction: rtl !important;
+  text-align: right !important;
+}
+.wy-nav-top {
+  direction: rtl !important;
+  text-align: right !important;
+}
+/* متن محتوا هم راست‌چین */
+.rst-content {
+  direction: rtl !important;
+  text-align: right !important;
+}

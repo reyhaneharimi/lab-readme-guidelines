@@ -28,3 +28,7 @@ html_static_path = ['_static']
 
 def setup(app):
     app.add_css_file('rtl.css')
+
+
+def setup(app):
+    app.add_css_file('sidebar-rtl.css')
