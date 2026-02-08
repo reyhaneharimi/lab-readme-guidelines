@@ -19,6 +19,13 @@
    :alt: registered anonymous
    :align: center
 
+
+.. image:: /_static/config-expires.png
+   :alt: registered anonymous
+   :align: center
+
+
+
 * **قابلیت expires:** مقدار زمان session را بر حسب ثانیه، دقیقه یا ساعت تعیین می‌کند. پس از اتمام، session پاک می‌شود. (`expires: 60m`)
 
 
@@ -39,23 +46,26 @@
   این موضوع برای رعایت SLO (Service Level Objective) بسیار اهمیت دارد و باعث تجربه کاربری بهتر می‌شود.
 
 
-.. image:: /_static/config-orphaned-overdue.png
+
+ 
+
+ .. image:: /_static/config-orphaned-overdue.png
    :alt: پارامترهای orphaned, overdue, deadline, overtime
-   :align: write
+   :align: center
 
 
 .. image:: /_static/dockerme5.PNG
    :alt: ﭖﺍﺭﺎﻤﺗﺮﻫﺎﯾ orphaned, overdue, deadline, overtime
-   :align: left
+   :align: center
 
 
----
+
 
 * **قابلیت updates.workshop=true:**
   اگر ورژنی جدید از ورکشاپ تعریف شود، با فعال شدن این قابلیت ورکشاپ جدید بدون اختلال/توقف sessionهای قدیمی جایگزین می‌شود. کاربران جاری کارشان را تمام می‌کنند و کاربر جدید همیشه با نسخه جدید سروکار خواهد داشت.
   این امکان باعث می‌شود در فرآیند آپدیت هیچ سشن فعالی از بین نرود.
 
----
+
 
 * **قابلیت workshop.defaults.refresh:**
   با این پارامتر، ورکشاپ‌ها طبق زمان‌بندی (scheduler) به صورت خودکار refresh می‌شوند: اگر همچنان از نسخه قبلی session فعال وجود داشته باشد ابتدا صبر می‌کند تا این sessionها به پایان برسد و سپس ورکشاپ رفرش و منابع غیرضروری آزاد می‌شوند.
