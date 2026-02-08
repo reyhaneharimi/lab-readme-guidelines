@@ -1,6 +1,3 @@
-def setup(app):
-    app.add_css_file('custom-rtl.css')
-
 # -- Path setup --------------------------------------------------------------
 import os
 import sys
@@ -26,14 +23,9 @@ language = 'fa'
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+
 def setup(app):
     app.add_css_file('rtl.css')
-
-
-def setup(app):
     app.add_css_file('sidebar-rtl.css')
-
-
-
-def setup(app):
-    app.add_css_file('hide-footer.css')    
+    app.add_css_file('hide-footer.css')
+    app.add_css_file('custom-rtl.css')
