@@ -15,15 +15,12 @@
 * **قابلیت anonymous:** محدودیت سشن برای کاربران مهمان. کاربران ناشناس هم می‌توانند چند سناریو را بطور همزمان اجرا کنند اگر این عدد تعیین شده باشد.
 
 
-.. image:: /_static/config-registered-anonymous.png
-   :alt: registered anonymous
-   :align: center
+.. raw:: html
 
-
-.. image:: /_static/config-expires.png
-   :alt: registered anonymous
-   :align: center
-
+   <div style="display: flex; flex-direction: row; gap: 28px; justify-content: center; align-items: flex-start;">
+       <img src="/_static/config-registered-anonymous.png" alt="ورودی اول" style="width:310px;">
+       <img src="/_static/config-expires.png" alt="ورودی دوم" style="width:310px;">
+   </div>
 
 
 * **قابلیت expires:** مقدار زمان session را بر حسب ثانیه، دقیقه یا ساعت تعیین می‌کند. پس از اتمام، session پاک می‌شود. (`expires: 60m`)
@@ -49,14 +46,12 @@
 
  
 
- .. image:: /_static/config-orphaned-overdue.png
-   :alt: پارامترهای orphaned, overdue, deadline, overtime
-   :align: center
+.. raw:: html
 
-
-.. image:: /_static/dockerme5.PNG
-   :alt: ﭖﺍﺭﺎﻤﺗﺮﻫﺎﯾ orphaned, overdue, deadline, overtime
-   :align: center
+   <div style="display: flex; flex-direction: row; gap: 28px; justify-content: center; align-items: flex-start;">
+       <img src="/_static/config-orphaned-overdue.png" alt="ﻭﺭﻭﺪﯾ ﺍﻮﻟ" style="width:310px;">
+       <img src="/_static/dockerme5.PNG" alt="ﻭﺭﻭﺪﯾ ﺩﻮﻣ" style="width:310px;">
+   </div>
 
 
 
