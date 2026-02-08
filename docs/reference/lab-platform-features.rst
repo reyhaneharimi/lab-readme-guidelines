@@ -17,9 +17,9 @@
 
 .. raw:: html
 
-   <div style="display: flex; flex-direction: row; gap: 28px; justify-content: center; align-items: flex-start;">
-       <img src="/_static/config-registered-anonymous.png" alt="ورودی اول" style="width:310px;">
-       <img src="/_static/config-expires.png" alt="ورودی دوم" style="width:310px;">
+   <div style="display: flex; flex-direction: row; flex-wrap:nowrap; gap: 24px; justify-content: center; align-items: flex-start;">
+       <img src="/_static/config-registered-anonymous.png" alt="ورودی اول" style="width:250px;">
+       <img src="/_static/config-expires.png" alt="ورودی دوم" style="width:250px;">
    </div>
 
 
@@ -48,9 +48,9 @@
 
 .. raw:: html
 
-   <div style="display: flex; flex-direction: row; gap: 28px; justify-content: center; align-items: flex-start;">
-       <img src="/_static/config-orphaned-overdue.png" alt="ﻭﺭﻭﺪﯾ ﺍﻮﻟ" style="width:310px;">
-       <img src="/_static/dockerme5.PNG" alt="ﻭﺭﻭﺪﯾ ﺩﻮﻣ" style="width:310px;">
+   <div style="display: flex; flex-direction: row; flex-wrap:nowrap; gap: 24px; justify-content: center; align-items: flex-start;">
+       <img src="/_static/config-orphaned-overdue.png" alt="ﻭﺭﻭﺪﯾ ﺍﻮﻟ" style="width:250px;">
+       <img src="/_static/dockerme5.PNG" alt="ﻭﺭﻭﺪﯾ ﺩﻮﻣ" style="width:250px;">
    </div>
 
 
