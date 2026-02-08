@@ -12,15 +12,21 @@
 
 * **قابلیت labels:** می‌توانیم برای پُرتال و سناریوها لیبل تعیین کنیم (مثلاً سطح سناریو یا نوع کاربر) و بعداً با API یا جستجو از آن استفاده کنیم.
 * **قابلیت registered:** محدودیت تعداد سشن همزمان برای کاربران ثبت‌نام شده را کنترل می‌کند.
+
+
+
+.. image:: /_static/config-registered-anonymous.png
+   :alt: ثبت ظرفیت کاربران
+   :align: center
+
+
 * **قابلیت anonymous:** محدودیت سشن برای کاربران مهمان. کاربران ناشناس هم می‌توانند چند سناریو را بطور همزمان اجرا کنند اگر این عدد تعیین شده باشد.
 
+  .. image:: /_static/config-expires.png
+   :alt: expires deadline overtime orphaned
+   :align: center
 
-.. raw:: html
 
-   <div style="display: flex; flex-direction: row; flex-wrap:nowrap; gap: 24px; justify-content: center; align-items: flex-start;">
-       <img src="/_static/config-registered-anonymous.png" alt="ورودی اول" style="width:250px;">
-       <img src="/_static/config-expires.png" alt="ورودی دوم" style="width:250px;">
-   </div>
 
 
 * **قابلیت expires:** مقدار زمان session را بر حسب ثانیه، دقیقه یا ساعت تعیین می‌کند. پس از اتمام، session پاک می‌شود. (`expires: 60m`)
@@ -28,7 +34,9 @@
 
   * **قابلیت orphaned:**
   اگر سناریو یا سشن مدتی بلااستفاده و رها باقی بماند (مثلاً کاربر صفحه را می‌بندد یا ارتباط قطع می‌شود)، بعد از مدت مشخص‌شده (مثل ۵ دقیقه)، سشن به صورت خودکار حذف می‌شود.
-  این قابلیت مصرف منابع سرور را کنترل کرده و مانع از باقی ماندن sessionهای بدون مصرف می‌شود.
+  این قابلیت مصرف منابع سرور را کنترل کرده و مانع از باقی ماندن sessionهای بدون مصرف می‌شود
+  
+
 
 * **قابلیت deadline:**
   حداکثر زمان مجاز هر سناریو است، حتی اگر کاربر بارها از قابلیت تمدید (overtime) استفاده کند، مجموع کل زمانش از این مقدار بالاتر نمی‌رود.
@@ -46,12 +54,9 @@
 
  
 
-.. raw:: html
-
-   <div style="display: flex; flex-direction: row; flex-wrap:nowrap; gap: 24px; justify-content: center; align-items: flex-start;">
-       <img src="/_static/config-orphaned-overdue.png" alt="ﻭﺭﻭﺪﯾ ﺍﻮﻟ" style="width:250px;">
-       <img src="/_static/dockerme5.PNG" alt="ﻭﺭﻭﺪﯾ ﺩﻮﻣ" style="width:250px;">
-   </div>
+.. image:: /_static/config-orphaned-overdue.png
+   :alt: orphaned و overdue
+   :align: center
 
 
 
@@ -60,6 +65,11 @@
   اگر ورژنی جدید از ورکشاپ تعریف شود، با فعال شدن این قابلیت ورکشاپ جدید بدون اختلال/توقف sessionهای قدیمی جایگزین می‌شود. کاربران جاری کارشان را تمام می‌کنند و کاربر جدید همیشه با نسخه جدید سروکار خواهد داشت.
   این امکان باعث می‌شود در فرآیند آپدیت هیچ سشن فعالی از بین نرود.
 
+
+
+.. image:: /_static/dockerme5.png
+   :alt: expires deadline overtime orphaned
+   :align: center
 
 
 * **قابلیت workshop.defaults.refresh:**
