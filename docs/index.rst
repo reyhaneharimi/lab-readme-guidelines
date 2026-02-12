@@ -17,7 +17,7 @@
    :maxdepth: 2
    :caption: راهنمای نصب
 
-   installation-guides/cluster-reqs/index
+   installation-guides/cluster-requirements/index
    installation-guides/installation-instructions/index
    installation-guides/cli-install/index
    installation-guides/carvel-install/index
