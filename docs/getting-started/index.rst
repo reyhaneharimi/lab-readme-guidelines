@@ -2,7 +2,9 @@
 ===========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: بخش‌ها
+
 
    راهنمای شروع سریع <quick-start/index>
    نیازمندی‌های سیستم <quick-start/index#host-system-requirements>

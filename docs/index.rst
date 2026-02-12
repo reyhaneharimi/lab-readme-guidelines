@@ -1,5 +1,5 @@
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: جزئیات پروژه
 
    project-details/overview/index
@@ -11,12 +11,7 @@
    :maxdepth: 2
    :caption: شروع سریع
 
-   getting-started/quick-start-guide/index
-   getting-started/creating-workshop/index
-   getting-started/workshop-templates/index
-   getting-started/local-env/index
-   getting-started/sample-workshops
-
+   getting-started/index
 
 .. toctree::
    :maxdepth: 2
