@@ -3,7 +3,11 @@
 راهنمای شروع سریع
 ==================
 
-سریع‌ترین روش برای نصب و شروع کار با Educates این است که آن را روی سیستم محلی خود با استفاده از یک Kubernetes cluster که توسط Kind ایجاد می‌شود اجرا کنید.
+.. contents::
+   :local:
+   :depth: 2
+
+سریع‌ترین روش برای نصب و شروع کار با Educates این است که آن را روی سیستم خود با استفاده از یک Kubernetes cluster که توسط Kind ایجاد می‌شود اجرا کنید.
 
 برای ساده‌تر شدن این فرآیند، Educates یک ابزار Command Line به نام ``educates`` CLI ارائه می‌دهد که می‌توانید با آن:
 
@@ -11,7 +15,8 @@
 - Educates را Deploy کنید
 - Workshopها را Deploy و مدیریت کنید
 
-این محیط محلی همچنین بهترین گزینه برای توسعه محتوای Workshop شخصی شماست، زیرا شامل یک local image registry می‌باشد که برای نگهداری base imageهای سفارشی و Workshopهای منتشرشده استفاده می‌شود.
+این محیط همچنین بهترین گزینه برای توسعه محتوای Workshop شخصی شماست،
+زیرا شامل یک local image registry می‌باشد که برای نگهداری base imageهای سفارشی و Workshopهای منتشرشده استفاده می‌شود.
 
 --------------------------------------------------------------------
 
@@ -20,7 +25,7 @@
 نیازمندی‌های سیستم میزبان
 --------------------------
 
-برای Deploy کردن Educates روی سیستم محلی، موارد زیر لازم است:
+برای Deploy کردن Educates روی سیستم، موارد زیر لازم است:
 
 - macOS یا Linux (در Windows باید از WSL استفاده شود)
 - یک محیط فعال ``docker``
@@ -45,7 +50,6 @@
 ::
 
   educates local config edit
-
   localKindCluster:
     listenAddress: 0.0.0.0
 
@@ -117,18 +121,27 @@ Educates برای Kubernetes Ingress به یک FQDN معتبر نیاز دارد
 
 به صورت پیش‌فرض از ``nip.io`` استفاده می‌شود، مانند:
 
+.. raw:: html
+
+   <div dir="ltr">
+
 ::
 
   192-168-1-10.nip.io
 
-برخی قابلیت‌ها نیاز به wildcard TLS certificate دارند که برای ``nip.io`` قابل تولید با LetsEncrypt نیست.
+.. raw:: html
+
+   </div>
+
+برخی قابلیت‌ها نیاز به wildcard TLS certificate دارند
+که برای ``nip.io`` قابل تولید با LetsEncrypt نیست.
 
 --------------------------------------------------------------------
 
 .. _local-kubernetes-cluster:
 
-ایجاد Kubernetes cluster محلی
-------------------------------
+ایجاد Kubernetes cluster
+-------------------------
 
 برای ایجاد cluster:
 
@@ -153,16 +166,24 @@ Educates برای Kubernetes Ingress به یک FQDN معتبر نیاز دارد
 
 نام context ایجاد شده:
 
+.. raw:: html
+
+   <div dir="ltr">
+
 ::
 
   kind-educates
+
+.. raw:: html
+
+   </div>
 
 --------------------------------------------------------------------
 
 .. _deploying-a-workshop:
 
-Deploy کردن یک Workshop
-------------------------
+Deploy کردن Workshop
+---------------------
 
 .. raw:: html
 

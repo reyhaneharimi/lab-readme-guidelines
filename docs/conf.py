@@ -4,24 +4,30 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
-project = 'راهنمای آزمایشگاه‌ها'
-author = 'داکرمید'
+project = 'راهنمای آزمایشگاه‌'
+author = 'داکرمی'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
 extensions = [
     'myst_parser',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
-
 language = 'fa'
 
 # -- Options for HTML output -------------------------------------------------
 
 html_theme = 'sphinx_rtd_theme'
+
+html_theme_options = {
+    "navigation_depth": 4,        # مهم برای نمایش Anchor
+    "collapse_navigation": False, # باز بودن منو
+    "sticky_navigation": True,
+}
+
 html_static_path = ['_static']
 
 html_css_files = [
@@ -29,5 +35,5 @@ html_css_files = [
     'sidebar-rtl.css',
     'hide-footer.css',
     'custom-rtl.css',
-    'custom.css',  
+    'custom.css',
 ]
