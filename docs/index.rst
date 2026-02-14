@@ -29,12 +29,11 @@
    :maxdepth: 2
    :caption: محتوای ورکشاپ
 
-   workshop-content/configuration/index
-   workshop-content/instructions/index
+   workshop-content/workshop-configuration/index
+   workshop-content/workshop-instructions/index
    workshop-content/runtime/index
    workshop-content/build-image/index
-   workshop-content/work-content/index   
-
+   workshop-content/work-content/index
 
 .. toctree::
    :maxdepth: 2
