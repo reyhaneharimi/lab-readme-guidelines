@@ -4,10 +4,10 @@
 ==============
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    پیکربندی ورکشاپ <workshop-configuration/index>
-   الزامات راه‌اندازی <workshop-configuration/index#workshop-setup-requirements>
-   گزینه‌های رندر <workshop-configuration/index#instructions-rendering-options>
-   پیکربندی کلاسیک <workshop-configuration/index#classic-renderer-configuration>
-   پیکربندی هوگو <workshop-configuration/index#hugo-renderer-configuration>
+   دستورالعمل‌های ورکشاپ <workshop-instructions/index>
+   زمان اجرای ورکشاپ <runtime/index>
+   ساخت ایمیج <build-image/index>
+   کار روی محتوا <work-content/index>
