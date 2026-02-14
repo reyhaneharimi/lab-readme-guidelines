@@ -3,7 +3,7 @@
 Feature Catalog
 ===============
 
-کاتالوگ کامل قابلیت‌های Production پلتفرم Educates.
+کاتالوگ قابلیت‌های Production پلتفرم Educates.
 
 .. toctree::
    :maxdepth: 1
