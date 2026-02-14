@@ -35,15 +35,12 @@
    workshop-content/build-image/index
    workshop-content/work-content/index
 
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: راهنمای پروداکشن
 
-   production-guides/features-capacity-and-scalability/index
-   production-guides/features-lifecycle-and-namespace/index
-   production-guides/advanced-impact-features/index
-   production-guides/config-usecase-patterns/index
-
+   production-guides/index
 
 .. toctree::
    :maxdepth: 2 
