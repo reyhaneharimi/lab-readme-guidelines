@@ -5,4 +5,4 @@
    :maxdepth: 1
 
    Feature Catalog <feature-catalog>
-   دستورالعمل‌های بازبینی (Review Guidelines) <review-guidelines/index>
+   دستورالعمل‌های بازبینی <review-guidelines/index>

@@ -1,20 +1,20 @@
-راهنماهای بازبینی و پیکربندی پیشرفته
-==================================
+دستورالعمل‌های بازبینی
+=======================
 
-در این بخش، تمامی راهنمایی‌ها و نکات لازم برای بازبینی و بهینه‌سازی تنظیمات پروداکشن آورده شده است.
+این بخش شامل چک‌لیست‌های فنی برای ارزیابی امنیت، منابع و پایداری Workshopها در محیط Production است.
 
 .. toctree::
    :maxdepth: 1
 
-   security-policy
-   disable-k8s
-   user-admin-access
-   memory
-   cpu
-   storage
-   resource-budget
-   resource-objects
-   startup
-   docker-resource-reqs
-   image-registry
-   docker-hub
+   تغییرات Security Policy <security-policy>
+   غیرفعال‌سازی دسترسی Kubernetes <disable-k8s>
+   دسترسی admin کاربر ورکشاپ <user-admin-access>
+   حافظه container ورکشاپ <memory>
+   CPU container ورکشاپ <cpu>
+   Storage container ورکشاپ <storage>
+   بودجه منابع Namespace <resource-budget>
+   Kubernetes resource objects <resource-objects>
+   Startup container ورکشاپ <startup>
+   Docker resource requirements <docker-resource-reqs>
+   Docker image registry <image-registry>
+   Hosting images on Docker Hub <docker-hub>
