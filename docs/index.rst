@@ -38,8 +38,10 @@
 
 .. toctree::
    :maxdepth: 2 
+   :caption: راهنماي پروداکشن
 
-   راهنمای پروداکشن <production-guides/index>
+   production-guides/index
+
 .. toctree::
    :maxdepth: 2 
    :caption: منابع سفارشی
