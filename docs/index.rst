@@ -37,7 +37,7 @@
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2 
 
    راهنمای پروداکشن <production-guides/index>
 .. toctree::
