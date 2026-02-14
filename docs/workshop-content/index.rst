@@ -48,14 +48,42 @@
 .. toctree::
    :maxdepth: 1
 
-   زمان اجرای ورکشاپ <runtime/index>
+   Runtime ورکشاپ <runtime/index>
+   Pre-defined environment variables از پیش تعریف‌شده <runtime/index#pre-defined-environment-variables>
+   اجرای مراحل هنگام شروع container <runtime/index#running-steps-on-container-start>
+   اجرای background application‌ها <runtime/index#running-background-applications>
+   محیط Terminal user shell <runtime/index#terminal-user-shell-environment>
+   Override کردن Terminal shell command <runtime/index#overriding-terminal-shell-command>
+
+
+
 
 .. toctree::
    :maxdepth: 1
 
-   ساخت ایمیج <build-image/index>
+   ساخت image <build-image/index>
+   ساختار Dockerfile <build-image/index#structure-of-the-dockerfile>
+   base image و version tagها <build-image/index#base-images-and-version-tags>
+   custom workshop base imageها <build-image/index#custom-workshop-base-images>
+   اجرای container با user ID تصادفی <build-image/index#container-run-as-random-user-id>
+   نصب system packageهای اضافی <build-image/index#installing-extra-system-packages>
+   نصب third party packageها <build-image/index#installing-third-party-packages>   
+
+
+.. _working-on-content:
+
+کار با workshop content
+=======================
 
 .. toctree::
    :maxdepth: 1
 
-   کار روی محتوا <work-content/index>
+   انتشار workshop content <#publishing-of-workshop-content>
+   ساخت local workshop image <#local-build-of-workshop-image>
+   غیرفعال کردن reserved sessions <#disabling-reserved-sessions>
+   دسترسی به workshop error logs <#accessing-workshop-error-logs>
+   به‌روزرسانی زنده content <#live-updates-to-the-content>
+   تغییرات custom workshop image <#custom-workshop-image-changes>
+   overlay برای custom workshop image <#custom-workshop-image-overlay>
+   proxy به local workshop content <#proxy-to-local-workshop-content>
+   تغییرات در workshop definition <#changes-to-workshop-definition>

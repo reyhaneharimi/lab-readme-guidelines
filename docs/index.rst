@@ -26,7 +26,7 @@
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: محتوای ورکشاپ
 
    workshop-content/workshop-configuration/index
