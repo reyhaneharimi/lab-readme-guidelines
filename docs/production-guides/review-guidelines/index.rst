@@ -1,6 +1,12 @@
-Changes to the security policy
-==============================
+.. _review-guidelines:
 
+Review Guidelines
+=================
+
+.. _changes-security-policy:
+
+Changes to the security policy
+-------------------------------
 به‌صورت پیش‌فرض، RBAC برای namespaceهای مربوط به sessionهای Workshop طوری تنظیم می‌شود که containerها فقط بتوانند به‌عنوان کاربر non-root اجرا شوند. دلیل این موضوع افزایش ریسک امنیتی در صورت اجازه دادن به کاربران Workshop برای اجرای هر چیزی به‌صورت root است.
 
 در حالت ایده‌آل این سیاست مناسب است، اما بسیاری از container imageهای موجود best practice اجرای به‌صورت non-root را رعایت نکرده‌اند و تنها در صورتی کار می‌کنند که به‌صورت root اجرا شوند. این موضوع به‌ویژه درباره imageهای رسمی Docker Hub صادق است.
@@ -31,8 +37,10 @@ spec:
 
 توجه داشته باشید که زمانی که یک Kubernetes virtual cluster برای یک session فعال می‌شود، security policy مربوط به namespace آن session به‌صورت خودکار از `restricted` به `baseline` تغییر می‌کند. این موضوع برای عملکرد صحیح virtual cluster ضروری است، اما همچنین به این معناست که deploymentهایی که توسط کاربر Workshop در virtual cluster ایجاد می‌شوند می‌توانند به‌صورت root اجرا شوند.
 
+.. _disabling-k8s-access:
+
 Disabling Kubernetes access
-===========================
+----------------------------
 
 به‌صورت پیش‌فرض، هر session از Workshop دسترسی به یک namespace در Kubernetes cluster دارد. این امکان برای آن است که به‌عنوان بخشی از Workshop بتوان deploymentهایی در Kubernetes cluster ایجاد کرد. معمولاً کاربر Workshop فقط به namespace اختصاصی همان session دسترسی دارد.
 
@@ -53,8 +61,10 @@ spec:
 
 * در صورتی که دسترسی به Kubernetes REST API موردنیاز نیست، آن را غیرفعال کنید.
 
+.. _workshop-user-admin-access:
+
 Workshop user admin access
-==========================
+--------------------------
 
 به‌صورت پیش‌فرض، اگر کاربر Workshop به cluster دسترسی داشته باشد، در namespace مربوط به session خود دارای نقش admin خواهد بود. با این حال، دسترسی cluster admin روی کل Kubernetes cluster ندارد.
 
@@ -72,8 +82,10 @@ Workshop user admin access
 * اطمینان حاصل کنید که service accountهای namespaceهای session که کاربر به آن‌ها دسترسی دارد، هیچ‌گونه elevated privilege نداشته باشند.
 * در صورت نیاز به نمایش قابلیت‌های cluster admin، از virtual cluster استفاده کنید.
 
+.. _workshop-container-memory:
+
 Workshop container memory
-=========================
+--------------------------
 
 به‌صورت پیش‌فرض، container مربوط به محیط Workshop دارای 512Mi حافظه است. اگر editor فعال باشد این مقدار به 1Gi افزایش می‌یابد. این حافظه به‌صورت guaranteed رزرو می‌شود و Kubernetes این مقدار را روی node هنگام scheduling رزرو می‌کند.
 
@@ -104,8 +116,10 @@ spec:
 
 همچنین حافظه با برابر قرار دادن مقدار `requests` و `limits` در deployment مربوط به Workshop container تضمین می‌شود. در صورت فعال بودن autoscaler ممکن است nodeها تخلیه شوند و session کاربر از ابتدا شروع شود. بنابراین Educates نباید روی clusterهایی که autoscaler آن‌ها می‌تواند تعداد nodeها را کاهش دهد اجرا شود.
 
+.. _workshop-container-cpu:
+
 Workshop container CPU
-======================
+-----------------------
 
 به‌صورت پیش‌فرض، Workshop session container هیچ مقدار مشخصی برای CPU تعیین نمی‌کند. در اغلب موارد این مناسب است، زیرا workloadهای داخل Workshop معمولاً CPU intensive یا طولانی‌مدت نیستند.
 
@@ -133,8 +147,10 @@ spec:
 * Workshopهای با نیاز CPU بالا باید روی cluster اختصاصی اجرا شوند.
 * برای Workshop container مقدار CPU request و limit مشخص شود.
 
+.. _workshop-container-storage:
+
 Workshop container storage
-==========================
+---------------------------
 
 Workshop باید فایل‌های تولیدشده را در home directory کاربر ذخیره کند. به‌صورت پیش‌فرض این فضا transient است و تمام sessionهایی که روی یک node اجرا می‌شوند از همان فضای دیسک استفاده می‌کنند.
 
@@ -165,8 +181,10 @@ spec:
 
 همیشه این ریسک وجود دارد که کاربر تلاش کند با نوشتن داده زیاد در مسیرهایی مانند `/tmp` حمله denial of service انجام دهد. میزان ریسک بستگی به وجود یا عدم وجود محدودیت فضای filesystem container دارد.
 
+.. _namespace-resource-budget:
+
 Namespace resource budget
-=========================
+--------------------------
 
 برای هر session از Workshop، یک namespace در Kubernetes cluster ایجاد می‌شود که فقط توسط همان session استفاده می‌شود. این کار برای آن است که Workshop بتواند با استفاده از Kubernetes resourceها، ابزارها و غیره، deploymentهایی در cluster ایجاد کند. اگر بیش از یک namespace موردنیاز باشد، این موضوع از طریق تعریف Workshop قابل پیکربندی است.
 
@@ -194,8 +212,10 @@ spec:
 * اگر budget از نوع `custom` استفاده می‌شود، باید `LimitRange` و `ResourceQuota` مناسب تعریف شده باشد.
 * اگر session namespace موردنیاز نیست، دسترسی به Kubernetes REST API غیرفعال شود.
 
+.. _kubernetes-resource-objects:
+
 Kubernetes resource objects
-===========================
+----------------------------
 
 در تعریف Workshop می‌توان Kubernetes resource objectهایی را مشخص کرد که به‌صورت مشترک برای workshop environment ایجاد شوند. همچنین می‌توان resource objectهایی تعریف کرد که برای هر workshop session به‌صورت جداگانه ایجاد شوند.
 
@@ -232,8 +252,10 @@ spec:
 * resourceهای cluster-scoped در `session.objects` باید شامل نام session باشند.
 * از environment یا session objects برای ایجاد CRDهایی که باید همیشه یک نام ثابت داشته باشند استفاده نکنید.
 
+.. _workshop-container-startup:
+
 Workshop container startup
-==========================
+---------------------------
 
 اگر Workshop نیاز دارد هنگام start شدن container کار خاصی انجام دهد، می‌تواند scriptهای shell اجرایی در مسیر `workshop/setup.d` قرار دهد. این scriptها بعد از تنظیمات اولیه container و قبل از start شدن serviceها یا dashboard اجرا می‌شوند.
 
@@ -258,8 +280,10 @@ script باید executable باشد (`chmod +x`). در غیر این صورت ا
 * scriptها طوری نوشته شوند که در صورت اجرای مجدد دچار خطا نشوند.
 * scriptها نباید serviceها را در background اجرا کنند.
 
+.. _docker-resource-requirements:
+
 Docker resource requirements
-============================
+-----------------------------
 
 در صورت فعال بودن docker support، یک container جانبی dockerd (`dind`) کنار workshop container اجرا می‌شود. عملیات `docker build` و اجرای containerها داخل این sidecar انجام می‌شود.
 
@@ -298,8 +322,10 @@ spec:
 * از buildهای متوالی غیرضروری خودداری شود.
 * کاربران containerهای متوقف‌شده و imageهای غیرضروری را حذف کنند.
 
+.. _docker-image-registry:
+
 Docker container image registry
-===============================
+--------------------------------
 
 Workshop می‌تواند یک container image registry جداگانه برای هر session فعال کند. این registry برای نگهداری imageهای ساخته‌شده با `docker build`، `pack`، `kpack`، `kaniko` و غیره استفاده می‌شود.
 
@@ -325,9 +351,10 @@ spec:
 * از build و push تکراری imageها اجتناب شود.
 * در صورت امکان imageها ابتدا به registry session push شوند.
 
-Hosting images on Docker Hub
-============================
+.. _hosting-images-dockerhub:
 
+Hosting images on Docker Hub
+-----------------------------
 اگر Workshop از imageهای Docker Hub استفاده کند، به‌دلیل rate limit هنگام اجرای تعداد زیاد session احتمالاً به محدودیت برخورد خواهید کرد.
 
 برای جلوگیری از rate limit باید image registry pull-through cache فعال شود. این تنظیم در سطح کل Educates انجام می‌شود و در تعریف Workshop قابل تنظیم نیست.
